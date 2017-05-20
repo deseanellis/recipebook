@@ -1,0 +1,177 @@
+@import 'partials/variables';
+@import 'partials/mixins';
+
+@include disable-input-outline;
+@include google-font('Lobster');
+@include google-font('Noticia+Text');
+
+html {
+  height: 100%;
+  font-size: 12px;
+  color: $primary-text-color;
+}
+body {
+  @include background-cover($url: 'https://tinyurl.com/l5sezre');
+  font-size: 1.2rem;
+  font-family: 'Noticia Text', serif;
+  .row:nth-child(1) {
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  .row:nth-child(2) {
+    margin-bottom: 30px;
+    div.heading {
+      padding: 5px 0px 5px 0px;
+      @include font-style($family: 'Lobster', $size: 2rem, $alignment: center);
+      color: $secondary-text-color;
+      span:nth-child(1) {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+.header {
+  @include font-style($family: 'Lobster', $size: 5rem, $alignment: center);
+  @include box();
+  color: $secondary-text-color;
+  span {
+    color: $primary-color;
+  }
+  img {
+    height: 70px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.sidebar {
+  height: 500px;
+  @include box;
+  overflow-y: hidden;
+  text-overflow: ellipsis;
+  @include media-query(sm) {
+    margin-bottom: 30px;
+  }
+  .list-group {
+    white-space: nowrap;
+    .list-group-item {
+      background-color: $secondary-text-color;
+      border-color: $background-color;
+      color: $background-color;
+      &:hover{
+        background-color: $primary-color;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
+  }
+  &:hover {
+    overflow-y: auto;
+  }
+  @include scrollbar($primary-color);
+  ul {
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}
+
+.content {
+  height: 500px;
+  @include box;
+  div.notice-initial, div.notice-delete {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .call-to-action {
+      button:nth-child(2) {
+        margin-left: 10px;
+      }
+    }
+  }
+  div.notice-new {
+    div.form-area {
+      > div:not(:last-child) {
+        margin-bottom: 20px;
+      }
+      div.submission {
+        @include submission;
+      }
+    }
+  }
+
+  div.notice-edit {
+    div.form-area {
+      div.middle-content {
+        display: flex;
+        justify-content:space-around;
+        div:nth-child(1) {
+          flex-grow: 1;
+          margin-right: 10px;
+        }
+        div:nth-child(2) {
+          img {
+            height: 250px;
+            border: 1px solid $secondary-text-color;
+          }
+        }
+      }
+      > div:not(:last-child) {
+        margin-bottom: 20px;
+      }
+      div.submission {
+        @include submission;
+      }
+    }
+  }
+
+}
+
+.footer {
+  display: flex;
+  @include box;
+  height: 30px;
+  font-size: 0.9rem;
+  align-items: center;
+  justify-content: center;
+  color: $secondary-text-color;
+  i:nth-child(1) {
+    color: $primary-color;
+  }
+}
+
+div.call-to-action {
+  margin-top: 10px;
+}
+
+input.input-flat {
+  @include input-flat(input);
+}
+
+textarea.input-flat {
+  @include input-flat(textarea);
+  @include scrollbar($primary-color);
+}
+
+.helper-text {
+  font-size: 1rem;
+  color: $secondary-text-color;
+  font-style: italic;
+}
+.info-icon {
+  color: $primary-color;
+}
+.info-icon-green {
+  color: $secondary-color;
+}
+.btn-green {
+  @include button-flat($bg-color: $background-color, $color: $secondary-color);
+}
+
+.btn-orange {
+  @include button-flat($bg-color: $background-color, $color: $primary-color);
+}

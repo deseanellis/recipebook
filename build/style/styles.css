@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css?family=Lobster");
+@import url("https://fonts.googleapis.com/css?family=Noticia+Text");
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+   outline: none;
+}
+
+html {
+   height: 100%;
+   font-size: 12px;
+   color: #333;
+}
+
+body {
+   min-height: 100%;
+   background-color: #FFF;
+   background-image: url("https://tinyurl.com/l5sezre");
+   background-size: cover;
+   font-size: 1.2rem;
+   font-family: 'Noticia Text', serif;
+}
+
+body .row:nth-child(1) {
+   margin-top: 10px;
+   margin-bottom: 30px;
+}
+
+body .row:nth-child(2) {
+   margin-bottom: 30px;
+}
+
+body .row:nth-child(2) div.heading {
+   padding: 5px 0px 5px 0px;
+   text-align: center;
+   font-family: "Lobster";
+   font-size: 2rem;
+   color: #968487;
+}
+
+body .row:nth-child(2) div.heading span:nth-child(1) {
+   color: #EF4723;
+}
+
+.header {
+   text-align: center;
+   font-family: "Lobster";
+   font-size: 5rem;
+   background-color: #E6E2DE;
+   box-shadow: inset 10px 12px 0px -8px rgba(209, 202, 197, 0.75), 10px 12px 6px -8px rgba(176, 141, 103, 0.6), 5px 5px 3px 0px rgba(0, 0, 0, 0.32);
+   border-top: 2px solid #EF4723;
+   color: #968487;
+}
+
+.header span {
+   color: #EF4723;
+}
+
+.header img {
+   height: 70px;
+   padding-left: 10px;
+   padding-right: 10px;
+}
+
+.sidebar {
+   height: 500px;
+   background-color: #E6E2DE;
+   box-shadow: inset 10px 12px 0px -8px rgba(209, 202, 197, 0.75), 10px 12px 6px -8px rgba(176, 141, 103, 0.6), 5px 5px 3px 0px rgba(0, 0, 0, 0.32);
+   border-top: 2px solid #EF4723;
+   overflow-y: hidden;
+   text-overflow: ellipsis;
+}
+
+@media only screen and (max-width: 768px) {
+   .sidebar {
+      margin-bottom: 30px;
+   }
+}
+
+.sidebar .list-group {
+   white-space: nowrap;
+}
+
+.sidebar .list-group .list-group-item {
+   background-color: #968487;
+   border-color: #E6E2DE;
+   color: #E6E2DE;
+}
+
+.sidebar .list-group .list-group-item:hover {
+   background-color: #EF4723;
+   font-weight: bold;
+   cursor: pointer;
+}
+
+.sidebar:hover {
+   overflow-y: auto;
+}
+
+.sidebar::-webkit-scrollbar-track {
+   background-color: rgba(255, 255, 255, 0);
+}
+
+.sidebar::-webkit-scrollbar {
+   width: 8px;
+   background-color: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+   background-color: #EF4723;
+}
+
+.sidebar ul li {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.content {
+   height: 500px;
+   background-color: #E6E2DE;
+   box-shadow: inset 10px 12px 0px -8px rgba(209, 202, 197, 0.75), 10px 12px 6px -8px rgba(176, 141, 103, 0.6), 5px 5px 3px 0px rgba(0, 0, 0, 0.32);
+   border-top: 2px solid #EF4723;
+}
+
+.content div.notice-initial, .content div.notice-delete {
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.content div.notice-initial .call-to-action button:nth-child(2), .content div.notice-delete .call-to-action button:nth-child(2) {
+   margin-left: 10px;
+}
+
+.content div.notice-new div.form-area > div:not(:last-child) {
+   margin-bottom: 20px;
+}
+
+.content div.notice-new div.form-area div.submission {
+   display: flex;
+   align-items: center;
+   width: 100%;
+}
+
+.content div.notice-new div.form-area div.submission div:nth-child(1) {
+   flex-grow: 1;
+   margin-right: 30px;
+}
+
+.content div.notice-new div.form-area div.submission .btn-cancel {
+   margin-left: 5px;
+}
+
+.content div.notice-edit div.form-area div.middle-content {
+   display: flex;
+   justify-content: space-around;
+}
+
+.content div.notice-edit div.form-area div.middle-content div:nth-child(1) {
+   flex-grow: 1;
+   margin-right: 10px;
+}
+
+.content div.notice-edit div.form-area div.middle-content div:nth-child(2) img {
+   height: 250px;
+   border: 1px solid #968487;
+}
+
+.content div.notice-edit div.form-area > div:not(:last-child) {
+   margin-bottom: 20px;
+}
+
+.content div.notice-edit div.form-area div.submission {
+   display: flex;
+   align-items: center;
+   width: 100%;
+}
+
+.content div.notice-edit div.form-area div.submission div:nth-child(1) {
+   flex-grow: 1;
+   margin-right: 30px;
+}
+
+.content div.notice-edit div.form-area div.submission .btn-cancel {
+   margin-left: 5px;
+}
+
+.footer {
+   display: flex;
+   background-color: #E6E2DE;
+   box-shadow: inset 10px 12px 0px -8px rgba(209, 202, 197, 0.75), 10px 12px 6px -8px rgba(176, 141, 103, 0.6), 5px 5px 3px 0px rgba(0, 0, 0, 0.32);
+   border-top: 2px solid #EF4723;
+   height: 30px;
+   font-size: 0.9rem;
+   align-items: center;
+   justify-content: center;
+   color: #968487;
+}
+
+.footer i:nth-child(1) {
+   color: #EF4723;
+}
+
+div.call-to-action {
+   margin-top: 10px;
+}
+
+input.input-flat {
+   font-family: 'FontAwesome';
+   font-size: 1.4rem;
+   background-color: transparent;
+   padding: 10px;
+   width: 100%;
+   border: none;
+   border-bottom: 1px solid #70B144;
+}
+
+input.input-flat:focus::-webkit-input-placeholder {
+   font-family: 'Noticia Text', serif;
+   font-size: 1.2rem;
+   opacity: 0;
+}
+
+textarea.input-flat {
+   font-family: 'FontAwesome';
+   font-size: 1.4rem;
+   background-color: transparent;
+   padding: 10px;
+   width: 100%;
+   border: 1px solid #968487;
+   height: 250px;
+}
+
+textarea.input-flat:focus::-webkit-input-placeholder {
+   font-family: 'Noticia Text', serif;
+   font-size: 1.2rem;
+   opacity: 0;
+}
+
+textarea.input-flat::-webkit-scrollbar-track {
+   background-color: rgba(255, 255, 255, 0);
+}
+
+textarea.input-flat::-webkit-scrollbar {
+   width: 8px;
+   background-color: transparent;
+}
+
+textarea.input-flat::-webkit-scrollbar-thumb {
+   background-color: #EF4723;
+}
+
+.helper-text {
+   font-size: 1rem;
+   color: #968487;
+   font-style: italic;
+}
+
+.info-icon {
+   color: #EF4723;
+}
+
+.info-icon-green {
+   color: #70B144;
+}
+
+.btn-green {
+   background-color: #E6E2DE;
+   border-color: #70B144;
+   color: #70B144;
+}
+
+.btn-green:hover {
+   background-color: #70B144;
+   border-color: #E6E2DE;
+   color: #FFF;
+}
+
+.btn-orange {
+   background-color: #E6E2DE;
+   border-color: #EF4723;
+   color: #EF4723;
+}
+
+.btn-orange:hover {
+   background-color: #EF4723;
+   border-color: #E6E2DE;
+   color: #FFF;
+}
