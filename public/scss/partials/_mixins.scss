@@ -1,0 +1,124 @@
+@mixin google-font($font) {
+  $font: unquote($font);
+  @import url('https://fonts.googleapis.com/css?family=#{$font}');
+}
+
+@mixin external-font($url) {
+  @import url($url);
+}
+
+@mixin media-query($size) {
+  @if $size == lg {
+    @media only screen and (max-width : 1200px) {
+      @content;
+    }
+  } @else if $size == md {
+    @media only screen and (max-width : 992px) {
+      @content;
+    }
+  } @else if $size == sm {
+    @media only screen and (max-width : 768px) {
+      @content;
+    }
+  } @else if $size == xs {
+    @media only screen and (max-width : 480px) {
+      @content;
+    }
+  }
+}
+
+@mixin disable-input-outline {
+  input:focus,
+  select:focus,
+  textarea:focus,
+  button:focus {
+      outline: none;
+  }
+}
+
+@mixin background-cover($url, $bg-color: #FFF) {
+  min-height: 100%;
+  background-color: $bg-color;
+  background-image: url($url);
+  background-size: cover;
+}
+
+@mixin box($bg-color: $background-color) {
+  background-color: $bg-color;
+  box-shadow: inset 10px 12px 0px -8px rgba(209,202,197,0.75), 10px 12px 6px -8px rgba(176,141,103,0.6), 5px 5px 3px 0px rgba(0,0,0,0.32);;
+  border-top: 2px solid $primary-color;
+}
+
+@mixin vertical-align-block {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+
+@mixin button-flat($bg-color, $color) {
+  background-color:$bg-color;
+  border-color: $color;
+  color: $color;
+  &:hover {
+    background-color: $color;
+    border-color: $bg-color;
+    color: #FFF;
+  }
+}
+
+@mixin font-style($family, $size, $alignment) {
+  text-align: $alignment;
+  font-family: $family;
+  font-size: $size;
+}
+
+@mixin input-flat($type) {
+  font-family: 'FontAwesome';
+  font-size: 1.4rem;
+  background-color: transparent;
+  padding: 10px;
+  width: 100%;
+  &:focus::-webkit-input-placeholder {
+    font-family: 'Noticia Text', serif;
+    font-size: 1.2rem;
+    opacity: 0;
+  }
+  @if $type == input {
+    border: none;
+    border-bottom: 1px solid $secondary-color;
+  }@else if $type == textarea {
+    border: 1px solid $secondary-text-color;
+    height: 250px;
+  }
+}
+
+@mixin submission {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  div:nth-child(1) {
+    flex-grow: 1;
+    margin-right: 30px;
+  }
+  .btn-cancel {
+    margin-left: 5px;
+  }
+}
+
+@mixin scrollbar($color) {
+  &::-webkit-scrollbar-track
+  {
+  	background-color: rgba(255,255,255,0);
+  }
+
+&::-webkit-scrollbar
+  {
+  	width: 8px;
+  	background-color: transparent;
+  }
+
+&::-webkit-scrollbar-thumb
+  {
+  	background-color: $color;
+  }
+}

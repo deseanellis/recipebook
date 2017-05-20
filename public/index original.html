@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="style/styles.css">
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Recipe Book</title>
+  </head>
+  <body>
+    <div id="root" class="container">
+      <div class="row">
+        <div class="col-sm-12 header">
+          <img src="https://cdn.rawgit.com/deseanellis/images/7ecf1b80/DeSean%20LogoSVG.svg" alt="logo">
+          <span>Recipe</span> Box
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3 sidebar">
+          <div class="heading">
+            <span>Recipe</span><span> List</span>
+          </div>
+          <ul class="list-group">
+            <li class="list-group-item">
+
+              <div>
+                Macaroni Pie
+              </div>
+                <div>
+                  <span class="btn-group">
+                    <button class="btn btn btn-sm btn-green btn-edit"><i class="fa fa-pencil-square-o"></i></button>
+                    <button class="btn btn-sm btn-orange"><i class="fa fa-trash-o"></i></button>
+                  </span>
+                </div>
+
+            </li>
+            <li class="list-group-item">
+              <div>
+                Cheese Cake
+              </div>
+                <div>
+                  <span class="btn-group">
+                    <button class="btn btn btn-sm btn-green"><i class="fa fa-pencil-square-o"></i></button>
+                    <button class="btn btn-sm btn-orange"><i class="fa fa-trash-o"></i></button>
+                  </span>
+                </div>
+            </li>
+            <li class="list-group-item">Meat Balls</li>
+            <li class="list-group-item">Roti</li>
+            <li class="list-group-item">Callaloo</li>
+            <li class="list-group-item">Bake and Shark</li>
+            <l1 class="list-group-item">Curry Crab and Dumpling</l1>
+            <l1 class="list-group-item">Stew Chicken</l1>
+            <l1 class="list-group-item">Pellau</l1>
+          </ul>
+        </div>
+        <div class="col-sm-8  col-sm-offset-1 content">
+
+          <div class="notice-add">
+            <div class="text-center">
+              <div>
+                <span>
+                  <i class="fa fa-question-circle fa-5x info-icon"></i>
+                  <br />
+                  You haven't added any receipes
+                </span>
+              </div>
+              <div class="call-to-action">
+                <button class="btn btn-green btn-add">Add New Recipe</button>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="notice-new"  style="display:none">
+            <div class="heading">Add New Recipe</div>
+            <div class="form-area">
+              <div>
+                <input type="text" class="input-flat" placeholder="&#xf040 Recipe Title" />
+              </div>
+              <div>
+                <textarea class="input-flat" placeholder="&#xf0f5 Ingredients"></textarea>
+                <p class="helper-text">Ingredients must be seperated by new lines.</p>
+              </div>
+              <div class="submission">
+                <div>
+                  <input type="text" class="input-flat" placeholder="&#xf0c1 Image URL" />
+                </div>
+                <div>
+                  <button class="btn btn-green">Save</button>
+                  <button class="btn btn-orange btn-cancel">Cancel</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="notice-edit" style="display:none">
+            <div class="heading">Edit Recipe: <span>Macaroni Pie</span></div>
+            <div class="form-area">
+              <div>
+                <input type="text" class="input-flat" placeholder="&#xf040 Recipe Title" value="Macaroni Pie" />
+              </div>
+              <div>
+                <textarea class="input-flat" placeholder="&#xf0f5 Ingredients">Macaroni Pasta&#13;&#10;Cheese&#13;&#10;Milk
+                </textarea>
+                <p class="helper-text">Ingredients must be seperated by new lines.</p>
+              </div>
+              <div class="submission">
+                <div>
+                  <input type="text" class="input-flat" placeholder="&#xf0c1 Image URL" value="https://www.myimage.com/macaroni" />
+                </div>
+                <div>
+                  <button class="btn btn-green">Update</button>
+                  <button class="btn btn-orange btn-cancel">Cancel</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 footer">
+          <span>
+            Free Code Camp <i class="fa fa-free-code-camp"></i> - React Project, DeSean Ellis <i class="fa fa-copyright"></i> 2017
+          </span>
+        </div>
+      </div>
+    </div>
+    <script>
+      $('.btn-add').on('click', function(){
+        $('.notice-add').hide();
+        $('.notice-new').show(400, 'linear');
+      });
+
+      $('.btn-edit').on('click', function(){
+        $('.notice-add').hide();
+        $('.notice-edit').show(400, 'linear');
+      });
+
+      $('.btn-cancel').on('click', function(){
+        $('.notice-new, .notice-edit').hide();
+        $('.notice-add').show();
+      });
+    </script>
+  </body>
+</html>
