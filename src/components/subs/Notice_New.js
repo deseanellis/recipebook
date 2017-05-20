@@ -19,7 +19,7 @@ class NoticeNew extends Component {
         <div className="heading">Add New Recipe</div>
         <div className="form-area">
           <div>
-            <input type="text" className="input-flat" placeholder={"\uf040 Recipe Title"} value={this.state.title} onChange={(event) => this.onInputChange("title",event)} />
+            <input type="text" className="input-flat" placeholder={"\uf040 Recipe Title"} value={this.state.title} onChange={(event) => this.onInputChange("title",event)} maxLength="18" />
           </div>
           <div>
             <textarea className="input-flat" placeholder={"\uf0f5 Ingredients"} value={this.state.ingredients} onChange={(event) => this.onInputChange("ingredients",event)}></textarea>
