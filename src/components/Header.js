@@ -5,7 +5,7 @@ class Header extends Component {
     return (
       <div className="row">
         <div className="col-sm-12 header">
-          <img src="https://cdn.rawgit.com/deseanellis/images/7ecf1b80/DeSean%20LogoSVG.svg" alt="logo" />
+          <img src="https://cdn.jsdelivr.net/gh/deseanellis/images@7ecf1b80/DeSean%20LogoSVG.svg" alt="logo" />
           {this.props.children}
         </div>
       </div>
